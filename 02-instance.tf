@@ -1,7 +1,7 @@
 # 키페어 생성 (이미 로컬에 키가 있다면 file()로 대체)
 resource "aws_key_pair" "default" {
   key_name   = "terraform-key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = file("./id_rsa.pub")
 }
 
 # 보안그룹 (SSH, ICMP, HTTP 허용)
